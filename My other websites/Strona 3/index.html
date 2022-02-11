@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="Javascript nauka">
+    <meta name="author" content="Michał Zalewski">
+    <meta name="keywords" content="Jacascirpt">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Proste Działania</h1>
+        <br><br>
+        <div class="a">
+            <label for="inp1">Podaj pierwszą liczbę</label>
+            <input type="number" id="inp1">
+        </div>
+        <br>
+        <div class="b">
+            <label for="inp2">Podaj drugą liczbę 2::</label>
+            <input type="number" id="inp2">
+        </div>
+        <br>
+        <div class="przyciski">
+            <input type="button" value="dodawanie"    id="dodaj"    onclick="suma()">
+            <input type="button" value="odejmowanie"  id="odejmij"  onclick="roznica()">
+            <input type="button" value="mnożenie"     id="pomnoz"   onclick="iloczyn()">
+            <input type="button" value="dzielenie"    id="podziel"  onclick="iloraz()">
+        </div>
+        <h1>Wynik:</h1>
+        <br>
+        <div id="wynik"></div>
+    </div>
+
+
+
+    <script>
+
+        function suma()
+        {
+
+            let a = document.getElementById("inp1").value;
+            let b = document.getElementById("inp2").value;
+
+            if (a == "" || b == "")
+            {
+                document.getElementById("wynik").innerHTML = "wpisz obie liczby!";
+            }
+            else 
+            {
+                a = parseFloat(a);
+                b = parseFloat(b);
+
+                let suma = a + b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+
+            }
+        }
+
+
+        function roznica()
+        {
+
+            let a = document.getElementById("inp1").value;
+            let b = document.getElementById("inp2").value;
+
+            if (a == "" || b == "")
+            {
+                document.getElementById("wynik").innerHTML = "wpisz obie liczby!";
+            }
+            else 
+            {
+                a = parseFloat(a);
+                b = parseFloat(b);
+
+                let roznica = a - b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica;
+
+            }
+        }
+
+        function iloczyn()
+        {
+            let a = document.getElementById("inp1").value;
+            let b = document.getElementById("inp2").value;
+
+            if (a == "" || b == "")
+            {
+                document.getElementById("wynik").innerHTML = "wpisz obie liczby!";
+            }
+            else 
+            {
+                a = parseFloat(a);
+                b = parseFloat(b);
+
+                let iloczyn = a * b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn;
+
+            }
+        }
+
+        function iloraz()
+        {
+            let a = document.getElementById("inp1").value;
+            let b = document.getElementById("inp2").value;
+
+            if (a == "" || b == "")
+            {
+                document.getElementById("wynik").innerHTML = "wpisz obie liczby!";
+            }
+            else if(b==0)
+            {
+                document.getElementById("wynik").innerHTML = "Nie dizelimy przez 0";
+            }
+            else 
+            {
+                a = parseFloat(a);
+                b = parseFloat(b);
+
+                let iloraz = a / b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz;
+
+            }
+        }
+
+
+
+
+
+
+        let roznica = a - b;
+                let mnozenie = a * b;
+                let dzielenie = a / b;
+        
+    </script>
+
+    <script src="js.js"></script>
+</body>
+</html>
