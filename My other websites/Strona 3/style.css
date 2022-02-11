@@ -12,25 +12,82 @@ body
 
 .container 
 {
-    width: 75%;
+    max-width: 700px;
     margin: 0 auto;
-    height: 500px;
+    min-height: 510px;
     background-color: white;
+    border-radius: 2rem;
+    margin-top: 150px;
+    box-shadow: 0px 1px 50px white;
+    opacity: .90;
+}
+
+input {
+    font-size: 1.4rem;
 }
 
 h1 
 {
+    padding-top: 2.5rem;
     text-transform: uppercase;
     text-align: center;
 }
 
 #wynik 
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 35px;
     width: 500px;
-    background-color: wheat;
-    border: 1px solid black;
+    background-color: green;
+    border: 1px solid lawngreen;
     margin-left: auto;
     margin-right: auto;
     font-size: 2rem;
+    border-radius: 2rem;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 1px 25px green;
+}
+
+.a {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.b {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.przyciski 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.przycisk 
+{
+    margin-right: 15px;
+    padding: 10px 15px;
+    color:  white;  
+    background-color: green;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    border: 1px lawngreen solid;
+    box-shadow: 0px 1px 25px green;
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+}
+
+.przycisk:hover
+{
+    color: white;  
+    background-color: darkgreen;
+    border: 1px green solid;
+    box-shadow: none;
 }

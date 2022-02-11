@@ -17,21 +17,22 @@
         <h1>Proste Działania</h1>
         <br><br>
         <div class="a">
-            <label for="inp1">Podaj pierwszą liczbę</label>
+            <label for="inp1">Podaj 1 liczbę:  </label>
             <input type="number" id="inp1">
         </div>
         <br>
         <div class="b">
-            <label for="inp2">Podaj drugą liczbę 2::</label>
+            <label for="inp2">Podaj 2 liczbę: </label>
             <input type="number" id="inp2">
         </div>
-        <br>
+        <br><hr><br>
         <div class="przyciski">
-            <input type="button" value="dodawanie"    id="dodaj"    onclick="suma()">
-            <input type="button" value="odejmowanie"  id="odejmij"  onclick="roznica()">
-            <input type="button" value="mnożenie"     id="pomnoz"   onclick="iloczyn()">
-            <input type="button" value="dzielenie"    id="podziel"  onclick="iloraz()">
+            <input type="button" class="przycisk" value="dodawanie"    id="dodaj"    onclick="suma()">
+            <input type="button" class="przycisk" value="odejmowanie"  id="odejmij"  onclick="roznica()">
+            <input type="button" class="przycisk" value="mnożenie"     id="pomnoz"   onclick="iloczyn()">
+            <input type="button" class="przycisk" value="dzielenie"    id="podziel"  onclick="iloraz()">
         </div>
+        <br><hr>
         <h1>Wynik:</h1>
         <br>
         <div id="wynik"></div>
@@ -128,14 +129,13 @@
             }
         }
 
+        set
 
 
 
 
 
-        let roznica = a - b;
-                let mnozenie = a * b;
-                let dzielenie = a / b;
+
         
     </script>
 
