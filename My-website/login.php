@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
         body{
             text-align: center;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -51,10 +52,7 @@
 
         a:hover {
             color: gray;
-        }
-
-
-    
+        }    
     </style>
 
 </head>
@@ -67,7 +65,7 @@
     <div id="hidden_div" style="display: none;"> <a href="index.html">Wejdź</a> </div>
 
     <script>
-    function check_password (input_element) {
+        function check_password (input_element) {
         
         //get value of input
         var password = input_element.toUpperCase().value;
@@ -77,8 +75,7 @@
             document.getElementById ('hidden_div').style.display = 'block';
         else
             document.getElementById ('hidden_div').style.display = 'none';
-
-}
+        }
     </script>
 </body>  
 
