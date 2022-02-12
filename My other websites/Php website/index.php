@@ -47,12 +47,12 @@
             //     echo "Hurra!";
             // }
     
-            $klasa = $_POST["klasa"];
-    
+            $klasa = $_POST["klasa"];    
             $q = "SELECT imie, Nazwisko, Srednia_ocen FROM  uczen, klasa WHERE nazwa = '$klasa' and klasa.id = uczen.id_klasy";
             
             $result = mysqli_query($connection, $q) or die("Problem z odczytem danych");
             $ile = mysqli_num_rows($result);
+            
             if ($ile == 0)
             {
                 echo '<span style="color: red;">Nie ma takiej klasy w szkole!</span>';
@@ -76,12 +76,13 @@ END;
                 while($row = mysqli_fetch_assoc($result))
                 {
                     echo "\n\t\t\t<tr>";
+                    
                     foreach($row as $col)
                     {
                         echo "<td>$col</td>";
                     }
+                    
                     echo "</tr>";
-
                     $suma += $row["Srednia_ocen"];
 
                     // echo "\r\n\t\t\t<tr><td>".$row["imie"]."</td><td>".$row["Nazwisko"]."</td><td>".
@@ -99,7 +100,6 @@ END;
             mysqli_close($connection);
         }
     }
-?>
-    
+?>    
 </body>
 </html>
