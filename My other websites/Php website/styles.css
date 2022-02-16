@@ -1,26 +1,107 @@
-body 
-{
-    padding: 30px;
-    background-color: #29201b;
-    color: #efefef;
-    font-family:'Open Sans', sans-serif;
-    font-size: 18px;
+body
+{   
+    background-color: #fff;
+    color: black;
+    margin: 0px;
+    padding: 0px;
 }
 
-form
+.btn 
 {
-    margin-bottom: 20px;
+    font-size:1.5rem;
+    width: 100%;
+    background-color: lime;
+    padding: .1rem .5rem;
+    margin-left: auto;
+    border: 1px solid green;
 }
 
-table 
+input 
 {
-    border-collapse: collapse;
-    border-spacing: 0;
+    width: 98%;
+    font-size: 1.2rem;
+}
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: wheat;
+    margin: 0 auto;
+    width: 60%;
+    border: .5px solid wheat;
 }
 
-th, td
+.container h1
 {
-    border: 1px solid white;
+    margin-top:0px;
+    padding-top: 1rem;
+}
+
+#user 
+{
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.blad
+{
+
+    width: 75%;
+    text-transform: capitalize;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+#logout 
+{
+    padding: 10px 0px;
+}
+
+.signup
+{
+    margin-top: 20px;
+}
+
+.signup a 
+{
+    text-decoration: none;
+    border-radius: 2rem;
+}
+
+.signup a:hover
+{
+    text-decoration: underline;
+}
+
+.pole
+{
+    margin-bottom: 15px;
+}
+
+#regulamin {
+    width: 10%;
+}
+
+h5
+{
+    margin-top: 0px;
+    display: inline-block;
+}
+
+.r-btn 
+{
+    background-color: lime;
     padding: 5px;
+    border: 1px solid green;
+}
+
+.srodek {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
+    width: 100%;
 }
