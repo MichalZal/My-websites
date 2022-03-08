@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfolio - Michał Zalewski </title>
+    <title> Portofolio </title>
     <meta name="author" content="Michał">
+    <link rel="icon" href="img/zhong.jpg">
 
     <link rel="stylesheet" href="fontawesome-free-6.0.0-web/css/all.css">
-    <link rel="stylesheet/less" type="text/css" href="styles.css" />
 
+    <link rel="stylesheet/less" type="text/css" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>   
-    
-    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
+<body onload="odliczanie();">
     <div>
         <nav data-aos="zoom-out">
-            <div class="navbar-logo" data-aos="fade-right">
-                Michał Zalewski
+            <div class="navbar-logo" id="zegar" data-aos="fade-right" >
+               
             </div>
             <div class="navbar-links" data-aos="zoom-left" >
                 <ul>
@@ -39,7 +40,7 @@
         </nav>
         <article>
             <div class="hello" data-aos="zoom-in-down">
-                <h1>Hello</i></h1>
+                <h1>Hello, my work: </h1>
             </div>
             <div class="main1" data-aos="zoom-in">
                 <div class="info info1" >
@@ -75,7 +76,6 @@
                 <h1> Expand <span class="more">More</span> 
                 <i class="fa-solid fa-arrow-down"></i></h1>
             </div>
-            <hr>
             <div class="main2">
                 <div class="content-1">
                     <div class="info-1"> Siema </div>
