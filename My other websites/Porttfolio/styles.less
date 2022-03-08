@@ -15,6 +15,7 @@
 @text: #efefef;
 @tsize: 1rem;
 @shadow: 1px 1px 2px black;
+@shadow-light: 1px 1px 2px white;
 
 @height: calc(300vh);
 
@@ -89,19 +90,41 @@ nav
 {
     display: flex;
     align-items: center;
+    padding: 0;
     color: @text;
     text-shadow: @shadow;
     font-weight: 500;
     transition: .1s all ease-in-out;
     letter-spacing: 3px;
     text-shadow: 1px 1px 2px black;
+    transition: all .3s ease-in-out;
+}
+
+.czas 
+{
+    letter-spacing: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 0 1rem;
+    transition: all .3s ease-in-out;
+    border-left: 3px solid @org;
+    border-right: 3px solid @org;
 }
 
 .navbar-logo:hover
 {
-    color: @org;
+    color: @Maroon;
     cursor: pointer; 
+
+    .czas 
+    {
+        background-color: @org;
+        text-shadow: 1px 1px 2px @Maroon;
+    }
 }
+
+
 
 //============================
 
@@ -129,7 +152,7 @@ nav
 
     ul li:hover
     {
-        background-color: #fbff00;
+        background-color: @org;
         cursor: pointer;
     }
 
@@ -149,7 +172,7 @@ nav
 
     ul li:hover a
     {
-        color: @bloodorg;
+        color: @Maroon;
         cursor: pointer;
         
     }
@@ -162,6 +185,16 @@ nav
 
 @media (max-width: 900px)
 {
+    nav 
+    {
+        justify-content: space-between;
+    }
+
+    .ham-menu
+    {
+        right: 20px;
+    }
+
     .navbar-links {
         display: none;
     }
@@ -229,6 +262,7 @@ nav
 .main1
 {
     width: 100%;
+    max-height: 800px;
     margin: 0rem auto;
     margin-bottom: 12rem;
     justify-content: center;
@@ -270,7 +304,7 @@ nav
 
 .info 
 {
-    flex-basis: 600px;
+    flex-basis: 610px;
     text-align: ce;
     padding: 1rem 2rem 1rem 2rem;
     background-color: @Darkred;
@@ -278,6 +312,7 @@ nav
     font-size: 1.1em;
     transition: .2s all ease-out;
     border: 1px solid @org;
+    box-shadow: 0px 0px 10px 1px @org;
 
     p
     {
@@ -298,6 +333,15 @@ nav
 }
 
 @media (max-width: 1300px) {
+    .main1
+    {
+        margin-bottom: -5rem;
+    }
+    
+    .hello
+    {
+        margin-bottom: -5rem;
+    }
     .info 
     {
         flex-basis: 1200px;
@@ -470,17 +514,17 @@ hr
     color: @text;
     text-shadow: @shadow;
     box-shadow: 0px 0px 30px 30px @Maroon;
-    border: 1px dotted @org;
 }
 
 .f
 {
     background-color: @Darkred;
     border: 1px dotted @org;
-    font-size: 2em;
+    font-size: 1.3em;
     padding: 1rem;
     transition: .2s all ease-out;
-    margin: 1rem 0 1rem 0;
+
+    margin: 0;
 }
 
 .f:hover 
@@ -586,7 +630,6 @@ hr
 
     nav
     {
-        justify-content: space-between;
         .navbar-logo
         {
             font-size:.5em;
@@ -596,7 +639,7 @@ hr
     .ham-menu
     {
         height: 17px;
-        right: 30px;
+        right: 20px;
         top: 5px;
         justify-content: space-around;
     }
