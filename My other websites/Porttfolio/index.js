@@ -1,5 +1,4 @@
-function odliczanie()
-{
+let odliczanie = (() => {
     var dzisiaj = new Date();
 
     let hour = dzisiaj.getHours();
@@ -15,9 +14,11 @@ function odliczanie()
     '<span class="czas">' + hour + ':' + minute + ':' + second + '</span>';
 
     setTimeout("odliczanie()", 1000);
-}
 
-function oblicz()
+})
+
+
+let oblicz = (() => 
 {
     let a = document.getElementById("a").value;
 
@@ -33,5 +34,5 @@ function oblicz()
     {
         document.getElementById("wynik").innerHTML = a + "0";
     }
+}) 
 
-}
