@@ -1,0 +1,36 @@
+body
+{
+    background-color: hsl(100, 60%, 10%);
+    color: white;
+    border: 1px solid black;
+}
+
+#container 
+{
+    margin: 5rem auto;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.foto
+{
+    width: 100px;
+    height: 100px;
+}
+
+.napis 
+{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+
+.center 
+{
+    border: 1px solid black;
+    padding: 1rem;
+}
