@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <meta name="description" content="siemasdeamdfasf">
+    <meta name="author" content="Michał">
+    <style>
+
+        body
+        {
+            background-color: hsl(100, 60%, 10%);
+        }
+
+        .container 
+        {
+            margin: 5rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #wynik
+        {
+            font-size: 2rem;
+            color: white;
+        }
+    </style>
+
+
+    <script defer> 
+        let wypisz = (() => {
+            let liczba1 = document.getElementById("a").value;
+            let liczba2 = document.getElementById("b").value;
+
+            let napis = "";
+
+            if (liczba1 <= liczba2)
+            {
+                for (i = liczba1; i <= liczba2; i++)
+                {
+                    napis = napis + i + " - ";
+                }
+            }
+            else if (liczba1 >= liczba2)
+            {
+                for (i = liczba1; i >= liczba2; i--)
+                {
+                    napis = napis + i + " - ";
+                }
+            }
+
+            document.getElementById("wynik").innerHTML = napis;
+
+        })
+    </script>
+</head>
+<body> 
+    <div class="container">
+        <input type="text" id="a"/>
+        <input type="text" id="b"/>
+        <input type="submit" value="Sprwadź" id="sprawdz" onclick="wypisz()">
+        <div id="wynik"></div>
+    </div>
+    
+</body>
+</html>
