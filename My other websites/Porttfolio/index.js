@@ -37,10 +37,15 @@ let oblicz = (() =>
 }) 
 
 let ham_menu = document.getElementById("ham")
+let navbar_links = document.querySelector(".navbar-links")
+let container = document.querySelector(".container")
 
 ham_menu.addEventListener('click', () => {
-    
+    navbar_links.classList.toggle('active')
+    container.classList.toggle('con');
 })
+  
+
 
 //=====================================================
 
@@ -81,9 +86,12 @@ let zmienslajd = (() => {
     timer2 = setTimeout("schowaj()", 4500);
 })
 
-let hello = document.querySelector(".hello2");
-let strzalka2 = document.querySelector(".strzalka2")
+let hello = document.querySelector(".hello");
 
-hello.addEventListener('click', () =>{
-    strzalka2.append = "active";
+hello.addEventListener('click', () => {
+    hello.style = "color: blue;";
+    setTimeout(() => {
+        hello.style = "color: white;"
+    }, 400);
 })
+
