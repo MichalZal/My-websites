@@ -19,7 +19,6 @@
 @shadow: 1px 1px 2px black;
 @shadow-light: 1px 1px 2px white;
 
-@height: calc(auto + 20vh);
 // @height: 20vh;
 
 /* ===== Scrollbar CSS ===== */
@@ -72,11 +71,10 @@ article
     background-image: url("img/red-lines-background-1436913502Fv0.jpg");
 }
 
-.con
+.con 
 {
-    opacity: .5;
+    opacity: .3;
 }
-
 
 //========================================
 
@@ -89,6 +87,7 @@ nav
     z-index: 1;
     border-top: 1px solid @org;
     transition-delay: .2s;
+    transition: .2s all ease-in-out;
 }
 
 .navbar-logo
@@ -139,6 +138,7 @@ nav
 .navbar-links
 {
     display: flex;
+    transition: .2s all ease-in-out;
 
     ul
     {
@@ -240,6 +240,7 @@ nav
                 background-color: @blood;
                 margin: 2rem 0;
                 border: 1px dotted @org;
+                box-shadow: 0px 0px 10px 5px @org;
             }
         }
 
@@ -268,7 +269,7 @@ nav
         transition: .4s all ease-out;
     }
 
-    .ham-menu:hover
+    .ham-menu-active
     {
         cursor: pointer;
 
@@ -388,6 +389,55 @@ nav
 
 }
 
+.work
+{
+    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    transition-delay: 2s;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .project 
+    {
+        padding-top: 1rem;
+        text-align: start;
+        background-color: @hsl;
+        color: @white;
+        font-size: 1.1em;
+        transition: .2s all ease-out;
+        box-shadow: 0px 0px 10px 1px @org;
+        border-radius: 1rem;
+        text-align: center;
+    }
+
+    img 
+    {
+        width: 320px;
+        height: 200px;
+        border-radius: 1rem;
+    }
+
+    p, a
+    {
+        padding: 1rem;
+    }
+
+    a
+    {
+        color: @org;
+    }
+
+    a:hover
+    {
+        color: @orghvr;
+    }
+
+
+
+    margin-bottom: 60vh;
+}
 
 .hello2
 {
@@ -411,6 +461,11 @@ nav
     {
         transform: scale(1.5);
     }
+}
+
+.unactive 
+{
+    visibility:hidden;
 }
 
 hr
@@ -698,7 +753,7 @@ hr
         height: 3px;
     }
 
-    .ham-menu:hover
+    .ham-menu-active
     {
         cursor: pointer;
         transform: rotate(90deg);
