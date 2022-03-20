@@ -17,8 +17,6 @@ let odliczanie = (() => {
 
 })
 
-
-
 let oblicz = (() => 
 {
     let a = document.getElementById("a").value;
@@ -96,5 +94,3 @@ hello.addEventListener('click', () => {
         hello.style = "color: white;"
     }, 400);
 })
-
-
