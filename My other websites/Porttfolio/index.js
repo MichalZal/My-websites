@@ -17,6 +17,8 @@ let odliczanie = (() => {
 
 })
 
+
+
 let oblicz = (() => 
 {
     let a = document.getElementById("a").value;
@@ -73,7 +75,7 @@ let zmienslajd = (() => {
     numer++;
     if (numer > 5) numer = 1;
 
-    let plik = "<img src=\"img/work" + numer + ".jpg\" />";
+    let plik = "<img src=\"img/work" + numer + ".jpg\" class=\"photo\" />";
 
     document.getElementById("p").innerHTML = plik;
     document.getElementById("p2").innerHTML = plik;
@@ -89,8 +91,19 @@ let zmienslajd = (() => {
 let hello = document.querySelector(".hello");
 
 hello.addEventListener('click', () => {
-    hello.style = "color: blue;";
+    hello.style = "color: orange;"
     setTimeout(() => {
         hello.style = "color: white;"
     }, 400);
 })
+
+let hello2 = document.querySelector(".hello2")
+
+hello2.addEventListener('click', () => {
+    hello2.classList.toggle("hello2-active")
+})
+
+if (media(window).width() > 900)
+{
+    article.classList.remove("con");
+}
