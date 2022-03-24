@@ -49,6 +49,8 @@ ham_menu.addEventListener('click', () => {
   
 
 
+
+
 //=====================================================
 
 let numer = Math.floor(Math.random()*5 + 1)
