@@ -59,6 +59,7 @@ let timer1 = 0;
 let timer2 = 0;
 
 let ustawslajd = ((nrslajdu) => {
+    
     clearTimeout(timer1);
     clearTimeout(timer2);
     numer = nrslajdu - 1;
@@ -74,6 +75,7 @@ let schowaj = (() => {
 })
 
 let zmienslajd = (() => {
+    
     numer++;
     if (numer > 5) numer = 1;
 
@@ -86,6 +88,7 @@ let zmienslajd = (() => {
     $("#p").fadeIn(500);
     $("#p2").fadeIn(500);
     $("#p3").fadeIn(500);
+    
     timer1 = setTimeout("zmienslajd()", 3000);
     timer2 = setTimeout("schowaj()", 2500);
 })
