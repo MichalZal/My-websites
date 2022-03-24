@@ -17,9 +17,7 @@ let odliczanie = (() => {
 
 })
 
-
-
-let oblicz = (() => 
+ler oblicz = (() => 
 {
     let a = document.getElementById("a").value;
 
