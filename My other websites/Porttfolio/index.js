@@ -10,8 +10,9 @@ let odliczanie = (() => {
     let second = dzisiaj.getSeconds();
     if (second<10) second = "0" + second;
 
-    document.getElementById("zegar").innerHTML = 
-    '<span class="czas">' + hour + ':' + minute + ':' + second + '</span>';
+    const zegar = document.getElementById("zegar")
+    
+    zegar.innerHTML = '<span class="czas">' + hour + ':' + minute + ':' + second + '</span>';
 
     setTimeout("odliczanie()", 1000);
 
