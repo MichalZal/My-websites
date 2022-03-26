@@ -17,7 +17,7 @@ let odliczanie = (() => {
 
 })
 
-ler oblicz = (() => 
+let oblicz = (() => 
 {
     let a = document.getElementById("a").value;
 
@@ -35,9 +35,9 @@ ler oblicz = (() =>
     }
 }) 
 
-let ham_menu = document.getElementById("ham")
-let navbar_links = document.querySelector(".navbar-links")
-let article = document.querySelector("article")
+const ham_menu = document.getElementById("ham")
+const navbar_links = document.querySelector(".navbar-links")
+const article = document.querySelector("article")
 
 ham_menu.addEventListener('click', () => {
     navbar_links.classList.toggle('active')
@@ -45,9 +45,6 @@ ham_menu.addEventListener('click', () => {
     ham_menu.classList.toggle('ham-menu-active')
 })
   
-
-
-
 
 //=====================================================
 
@@ -91,7 +88,9 @@ let zmienslajd = (() => {
     timer2 = setTimeout("schowaj()", 2500);
 })
 
-let hello = document.querySelector(".hello");
+// ==================mechanika===================
+
+const hello = document.querySelector(".hello");
 
 hello.addEventListener('click', () => {
     hello.style = "color: orange;"
@@ -100,7 +99,7 @@ hello.addEventListener('click', () => {
     }, 400);
 })
 
-let hello2 = document.querySelector(".hello2")
+const hello2 = document.querySelector(".hello2")
 
 hello2.addEventListener('click', () => {
     hello2.classList.toggle("hello2-active")
