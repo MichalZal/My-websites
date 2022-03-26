@@ -105,7 +105,9 @@ hello2.addEventListener('click', () => {
     hello2.classList.toggle("hello2-active")
 })
 
-if (media(window).width() > 900)
-{
-    article.classList.remove("con");
-}
+
+//already fixed
+// if (media(window).width() > 900)
+// {
+//     article.classList.remove("con");
+// }
