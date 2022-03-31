@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    background-color: #eee;
+    color: black;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #33aa33;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.headerText {
+    padding: 1rem;
+    color: white;
+}
+
+.search {
+    width: 40%;
+    height: 30px;
+}
+
+.container {
+    border: 1px solid #aaa;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.cardBody {
+    border-bottom: 4px solid #33aa33;
+    padding-bottom: 1rem;
+}
+
+input[type="text"] {
+    width: 70%;
+    border: 1px solid #aaa;
+    padding: .5rem;
+}
+
+.inputH1 {
+    margin-bottom: 1rem;
+}
+
+.itemsH1 {
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.listGroup {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    list-style-position: outside;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.listGroupItem {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    width: 100%;
+    list-style-type: none;
+    list-style-position: outside;
+    padding: .5rem .6rem .3rem .6rem;
+    border-radius: .2rem;
+}
+
+.liText {
+    letter-spacing: 1px;
+}
+
+.liClose {
+    background-color: red;
+    color: white;
+    padding: .1rem .2rem;
+    font-size: .9em;
+    border: none;
+    transition: .1s box-shadow ease-in-out;
+}
+
+.liClose:hover,
+.liClose:focus {
+    background-color: red;
+    box-shadow: 0px 0px 5px 1px red;
+}
+
+.btn-text {
+    border: 2px solid gray;
+    padding: .3rem;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color:black;
+    border-radius: .3rem;
+    padding: .5rem;
+    margin-left: 5px;
+    color: white;
+    border: none;
+    transition: all .3s ease-in;
+    box-sizing: border-box;
+}
+
+.btn-submit:hover,
+.btn-submit:focus 
+{
+    background-color: #338833;
+    border: 1px solid darkgreen;
+}
+
+#button{
+    background-color: #111;
+    color: white;
+    width: 100%;
+    border-radius: .2rem;
+    padding: 0.7rem;
+    /* margin: 1rem; */
+    border: none;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* Jakies klasy smieszne */
+.red
+{
+    color: red;
+}
+
+.box 
+{
+    background-color: #33aa33;
+    transition: .3s all ease;
+    margin: 1.5rem auto;
+    padding: 1rem;
+}
+
+.output {
+    color: red;
+    display: none;
+}
