@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS</title>
-    <meta name="description" content="siemasdeamdfasf">
-    <meta name="author" content="Michał">
-
-    <script src="js.js" ></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body> 
-    <div id="doc"></div>
+    <title>js</title>
     
+    <script src="./js.js" defer></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1 class="headerText"> Item Lister </h1>
+      <input type="search" class="search" id="filter" placeholder="search">
+    </header>
+    <div class="container">   
+      <div>
+        <form id="addForm">
+          <h1 class="inputH1"> Add items </h1> 
+          <input type="text" class="btn-text" id="newItem"> 
+          <button type="submit" class="btn-submit"> Dodaj Itema! </button> 
+        </form>
+        <span class="output">Podaj nazwe</span>
+      </div>
+      <div class="card cardBody" id="main">   
+        <h1 class="itemsH1"> Items </h1>     
+        <ul class="listGroup" id="items">
+          <li class="listGroupItem">
+            <div class="liText">Item 1</div>
+            <button class="liClose" id="liClose">x</button>
+          </li>
+          <li class="listGroupItem">
+            <div class="liText">Item 2</div>
+            <button class="liClose" id="liClose">x</button>
+          </li>
+          <li class="listGroupItem">
+            <div class="liText">Item 3</div>
+            <button class="liClose" id="liClose">x</button>
+          </li>
+          <li class="listGroupItem">
+            <div class="liText">Item 4</div>
+            <button class="liClose" id="liClose">x</button>
+          </li>
+        </ul>
+        <br/>
+          <button class="btn btn-dark" id="button"> Exit </button>
+      </div>   
+    </div>
+
+
 </body>
 </html>
