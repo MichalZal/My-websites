@@ -18,47 +18,47 @@
 
 		<script type="text/babel">
 			const Names = props => {
-				// const [showNameState, setShowNameState] = React.useState(true);
+			  // const [showNameState, setShowNameState] = React.useState(true);
 
-				const names = ["Olvieir", "Marcin", "Radek"];
-				const namesList = names.map(name => <li key={name}>{name}</li>)
-				// const showNames = true;
-				// const toggleNames = () => setShowNameState(!showNameState)
+			  const names = ["Olvieir", "Marcin", "Radek"];
+			  const namesList = names.map(name => <li key={name}>{name}</li>)
+			  // const showNames = true;
+			  // const toggleNames = () => setShowNameState(!showNameState)
 
 
-				return (
-					<div>
-						{props.test ? <ul> {namesList} </ul> : "Brak imion"}
+			  return (
+			    <div>
+			      {props.test ? <ul> {namesList} </ul> : "Brak imion"}
 
-					</div>
-				)
+			    </div>
+			  )
 			}
 
 			class Headline extends React.Component {
-				state = {
-					title: 'ReactJS',
-					showNames: true
-				}
+			  state = {
+			    title: 'ReactJS',
+			      showNames: true
+			  }
 
-				toggleNames() {
-					this.setState({showNames: !this.state.showNames })
-				}
+			  toggleNames() {
+			    this.setState({showNames: !this.state.showNames })
+			  }
 
-				render() {
-					const changeTitle = () => this.setState({title: 'Vue' })
+		          render() {
+			    const changeTitle = () => this.setState({title: 'Vue' })
 					
 
-					return (
-						<div>
-							<h2> Hello {this.state.title} </h2>
-							<Names test={this.state.showNames}/>
-							<button onClick={changeTitle}>Change Title </button>
-							<button onClick={() => this.toggleNames()}> Toggle names </button>
-						</div>
-					)
-				}
+			    return (
+				<div>
+				  <h2> Hello {this.state.title} </h2>
+			   	  <Names test={this.state.showNames}/>
+				  <button onClick={changeTitle}>Change Title </button>
+				  <button onClick={() => this.toggleNames()}> Toggle names </button>
+				</div>
+			    )
+			  }
 			}
-			ReactDOM.render(<Headline />, document.querySelector("#app"));
+		  ReactDOM.render(<Headline />, document.querySelector("#app"));
 		</script>
 	</body>
 </html>
