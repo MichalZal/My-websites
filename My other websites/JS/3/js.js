@@ -24,8 +24,6 @@ let zmienslajd = (() => {
     let plik = "<img class=\"foto\" src=\"img/s" + numer + ".jpg\" />";
 
     let wynik = document.querySelector(".wynik").innerHTML = numer;
-
-
     document.getElementById("container").innerHTML = plik;
     
     $("#container").fadeIn(500);
