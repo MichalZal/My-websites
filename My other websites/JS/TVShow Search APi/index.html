@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            transition: .5s background-color cubic-bezier(1,.64,.68,1.54);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: gray;
+            /* padding: .3rem; */
+            gap: 1rem;
+            width: 100%;
+            max-width: 900px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        header {
+            margin: 3rem auto;
+            justify-content: center;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Click to get new Jokes!</h1>
+    <button class="btn">Button</button>
+    <ul class="jokes"></ul> -->
+    <header>
+        <h1>TV Show Search</h1>
+        <form id="searchFrom"> 
+            <input type="text" placeholder="Tv show title" name="query">
+        <button>Search</button>
+        </form>
+    </header>
+
+    <div class="container">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="kurs.js"></script>
+</body>
+</html>
