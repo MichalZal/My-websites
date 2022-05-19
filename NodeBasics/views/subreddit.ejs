@@ -1,0 +1,16 @@
+<%- include('partials/head.ejs') %>
+    <%- include('partials/navbar') %>
+
+		<div class="container">
+			<h1>Search result for: <%= name %></h1>
+			<% for (let post of posts) {%>
+			<article>
+				<h3>Autohr: <%= post.author%></h3>
+				<h3>post: <%= post.title%></h3>
+				<% if(post.img) {%>
+				<img src="<%=post.img%>" />
+				<% } %>
+			</article>
+			<% } %>
+		</div>
+<%- include('partials/footer') %>

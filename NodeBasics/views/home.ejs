@@ -1,0 +1,30 @@
+<%- include('partials/head.ejs') %>
+    <%- include('partials/navbar') %>
+
+    <h1><%= 'Welcome to'.toUpperCase() %> home page!</h1>
+    <h2> this is home page of NodeJs files :) </h2>
+    <div><a href="./cats"> link to = cats</a></div>
+    <div><a href="./rand"> link to = rand</a></div>
+
+    <form onsubmit="handleSubmit">
+        <label> search </label>
+        <input type="search" id="search" placeholder="search">
+        <div><button><a id="link" href="./s/cos"> link to = search</a></button></div>
+    </form>
+    <div><a href="./cats"> link to = cats</a></div>
+
+
+
+
+    <script type="text/javascript">
+        
+        const handleSubmit = () => {
+            const input = document.querySelector("#search").value;
+            const search = document.querySelector("#link");
+            
+            search.setAttribute("href", `./s/${input}`)
+        
+        }
+    </script>
+
+<%- include('partials/footer') %>

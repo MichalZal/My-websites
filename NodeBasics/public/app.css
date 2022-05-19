@@ -1,0 +1,32 @@
+
+body {
+  padding: 1rem;
+  background-color: #343434;
+  color: white;
+  margin: 0 auto;
+  font-family:'Courier New', Courier, monospace
+}
+
+img {
+  object-fit:cover;
+  aspect-ratio: 16/ 9;
+  max-width:100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+article {
+  margin: 3rem 0;
+  border: 1px solid white;
+  padding: 5px 20px 5px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}

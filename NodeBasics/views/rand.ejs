@@ -1,0 +1,7 @@
+<%- include('partials/head.ejs') %>
+    <%- include('partials/navbar') %>
+    
+    <h1>Your random number is: <%=  rand % 2 == 0 ? rand : 'nie parzysty'%></h1>
+    <% if (rand % 2 == 0) { %> <h1> <%= rand %> </h1>
+    <% } else { %> <h1> nie parzysty </h1> <% } %>
+<%- include('partials/footer') %>
