@@ -1,0 +1,28 @@
+.button {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  margin: .7rem 0 0;
+  border: 1px solid #8b005d;
+  color: white;
+  background: #8b005d;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .2s all linear;
+  width: au
+}
+.button:focus {
+  outline: none;
+}
+.button:hover,
+.button:active {
+  background: #9b0e77;
+  border-color: #ac0e77;
+  box-shadow: 0 0 5px #ac0e77;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 100%;
+  }
+}
