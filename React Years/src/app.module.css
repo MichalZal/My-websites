@@ -1,0 +1,10 @@
+.notFound {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+  background-color: white;
+  padding: .6rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size:1.2rem;
+}
