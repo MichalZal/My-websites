@@ -10,7 +10,7 @@ const UserList = props => {
     props.onDelete(id)
   }
 
-	return (
+return (
     <Card className={classes.users}>
       <ul>
         {props.users.map((user) => (
