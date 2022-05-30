@@ -73,6 +73,7 @@ const AddUser = (props) => {
 						type="number"
 						name="age"
 						value={enteredAge}
+
 					></input>
 					<Button className={classes.btn} type="submit">
 						Add User
