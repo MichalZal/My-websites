@@ -13,7 +13,7 @@ import Input from "../UI/Input/Input";
 import classes from "./Login.module.css";
 import AuthContext from "../../store/auth-context";
 
-// reducers
+// reducery
 const emailReducer = (state, action) => {
 	if (action.type === "USER_INPUT") {
 		return { value: action.val, isValid: action.val.includes("@") };
@@ -34,6 +34,7 @@ const passwordReducer = (state, action) => {
 	return { value: "", isValid: false };
 };
 
+// komponent
 const Login = (props) => {
 	const [formIsValid, setFormIsValid] = useState(false);
 	const [emailState, dispatchEmail] = useReducer(emailReducer, {
