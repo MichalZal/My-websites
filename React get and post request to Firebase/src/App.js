@@ -11,6 +11,7 @@ const App = () => {
   const fetchMoviesHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
+  
     try {
       const response = await fetch('https://post-request-project-default-rtdb.europe-west1.firebasedatabase.app/movies.json');
       if (!response.ok) {
