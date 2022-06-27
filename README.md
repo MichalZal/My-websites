@@ -1,5 +1,1 @@
-# Its a Todo App, which conntects to Firebase. You can manage you todos, send get and post request to database. 
-# I used here a custom hook called useHttp, which creates the http request and you can configure what kind of request it shoulbe, either post, get or delete. 
-
-### to use this app, first you need to use npm i to install all the dependencies. 
-### then create new firebase backend and create realtime database. Copy the link to it and use to fetch data from it. 
+# There are some of my Projects. In the early 2022 I was sending here some bad projects but later I learned Raact and here are some of the well designed apps. Some todos, Firebase connections, some basic PHP and a lot of react
