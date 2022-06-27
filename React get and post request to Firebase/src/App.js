@@ -1,89 +1,62 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import MoviesList from './components/MoviesList';
-import AddMovie from './components/AddMovie';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import SideBar from './components/SideBar/SideBar';
+import Tasks from './components/Tasks/Tasks';
+import NewTask from './components/NewTask/NewTask';
+import useHttp from './hooks/use-http'
+import styled from 'styled-components'
+
+const AppDiv = styled.div`
+  display: flex;
+  width: 100%;
+  border: 1px solid red;
+  justify-content: center;
+  gap: 2rem;
+  align-items: start;
+`;
 
 const App = () => {
-  const [movie, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const fetchMoviesHandler = useCallback(async () => {
-    setIsLoading(true);
-    setError(null);
-  
-    try {
-      const response = await fetch('https://post-request-project-default-rtdb.europe-west1.firebasedatabase.app/movies.json');
-      if (!response.ok) {
-        throw new Error('Something went wrong!');
-      }
-      const data = await response.json();
-
-      const loadedMovies = [];
-      for (const key in data) {
-        loadedMovies.push({
-          id: key,
-          title: data[key].title,
-          releaseDate: data[key].releaseDate,
-          openingText: data[key].openingText,
-        });
-      }
-      setMovies(loadedMovies)
-    } catch (error) {
-      setError(error.message);
-    }
-    setIsLoading(false);
-  }, []);
+  const [tasks, setTasks] = useState([])
+  const {isLoading, error, sendRequest: fetchTasks} = useHttp()
 
   useEffect(() => {
-    fetchMoviesHandler();
-  }, [fetchMoviesHandler]);
+    const transformTasks = tasksObject => {
+      const loadedTasks = []
+      for (const key in tasksObject) {
+        loadedTasks.push({ id: key, text: tasksObject[key].text})
+      }
+      setTasks(loadedTasks)
+    };
 
-  const addMovieHandler = async (movie) => {
-    try {
-      const res = await fetch('https://post-request-project-default-rtdb.europe-west1.firebasedatabase.app/movies.json', {
-      method: 'POST',
-      body: JSON.stringify(movie),
-      header: {
-        'Content-Type': 'application/json'
-      }      
+    fetchTasks(    {
+      url: "https://react-tasks-75894-default-rtdb.europe-west1.firebasedatabase.app/tasks.json",
+      method: 'GET'
+    }, transformTasks);
+  }, [fetchTasks]);
+
+  const taskAddHandler = (task) => {
+    setTasks((prevTasks) => prevTasks.concat(task));
+  };
+
+  const deleteTaskHandler = (task) => {
+    setTasks((prevTasks) => {
+      return prevTasks.pop(task) 
     })
-
-    const data = res.json()
-    console.log(data)
-    } catch {
-      console.log('errpr')
-    }
-  }
-
-  let content = <p>Found no movies.</p>;
-  if (movies.length > 0) {
-    content = <MoviesList movies={movies} />;
-  }
-  if (error) {
-    content = <p>{error}</p>;
-  }
-  if (isLoading) {
-    content = <p>Loading...</p>;
   }
 
   return (
-    <React.Fragment>
-      <header className='header'> 
-        <h1>Data Fecher</h1>
-        <p>Send post and get requests!</p>
-      </header>
-      <main classname='main'>
-        <section>
-          <AddMovie onAddMovie={addMovieHandler} />
-        </section>
-        <section>
-          <button onClick={fetchMoviesHandler}>Fetch Movies</button>
-        </section>
-        <section>{content}</section>
-      </main>
-    </React.Fragment>
+    <AppDiv>
+      <section>
+      <NewTask onAddTask={taskAddHandler} />
+      <Tasks
+        items={tasks}
+        loading={isLoading}
+        error={error}
+        onFetch={fetchTasks}
+        />
+      </section>
+      <SideBar items={tasks} onDelete={deleteTaskHandler}/>
+    </AppDiv>
   );
 }
- 
+
 export default App;
