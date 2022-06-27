@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useRef} from "react";
 import styled from "styled-components";
 import Button from '../UI/Button'
-
+import useHttp from '../../hooks/use-http'
 
 const SidebarContainer = styled.aside`
   width: 100%;
@@ -10,6 +10,7 @@ const SidebarContainer = styled.aside`
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  margin-top: 1.8rem;
 `;
 
 const SidebarHeader = styled.div`
@@ -36,17 +37,30 @@ const ListItem = styled.li`
 `
 
 const SideBar = (props) => {
+  const {isLoading, error, sendRequest} = useHttp()
+  const taskEl = useRef()
+
+  const deleteTask = e => {
+    sendRequest({url: 'https://react-tasks-75894-default-rtdb.europe-west1.firebasedatabase.app/tasks.json', 
+      method: "DELETE", 
+      headers: {
+        'Content-Type': 'application/json',
+      }, 
+      body: JSON.stringify(taskEl.current.value)
+    })
+  } 
+  
   const tasks = props.items.map(task => 
-  <ListItem key={task.id}>
+  <ListItem ref={taskEl} key={task.id}>
     <div>{task.text}</div>
-    <Button onClick={props.onDelete}>X</Button>
+    <Button onClick={deleteTask}>X</Button>
   </ListItem>)
   
   return (
     <SidebarContainer>
       <SidebarHeader><h2>Delete</h2></SidebarHeader>
       <UnorderedList>
-        {tasks}
+        {!error && !isLoading && tasks}
       </UnorderedList>
     </SidebarContainer>
   );
