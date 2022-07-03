@@ -17,13 +17,14 @@
   color: #616161;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  padding: .3rem;
 }
 
 .control input {
   display: block;
   width: 20rem;
-  margin: auto;
-  border-radius: 4px;
-  padding: 0.25rem;
+  margin: 0 auto 1.2rem;
+  border-radius: 7px;
+  padding: 0.6rem;
   border: 1px solid #ccc;
 }
