@@ -16,19 +16,19 @@ export const TodosContext = React.createContext<TodosContextObject>({
 const ContextProvider: React.FC<{children: React.ReactNode}> = (props) => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
-	const submissionHandler = (text: string) => {
-		const newTodo = new Todo(text);
+  const submissionHandler = (text: string) => {
+	const newTodo = new Todo(text);
 
-		setTodos((prev) => {
-			return prev.concat(newTodo);
-		});
-	};
+	setTodos((prev) => {
+		return prev.concat(newTodo);
+	});
+  };
 
-	const deleteHandler = (id: string) => {
-		setTodos((prev) => {
-			return prev.filter((todo) => todo.id !== id);
-		});
-	};
+  const deleteHandler = (id: string) => {
+	setTodos((prev) => {
+		return prev.filter((todo) => todo.id !== id);
+	});
+  };
 
   const contextValue: TodosContextObject = {
     items: todos,
