@@ -1,4 +1,5 @@
 import React from 'react';
+import ContextProvider from './store/todos-context'
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -7,5 +8,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <App />
+  <ContextProvider>
+    <App />
+  </ContextProvider>
 );
